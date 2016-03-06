@@ -2,8 +2,8 @@
 //  GYCalendarView.m
 //  GYCalendar
 //
-//  Created by 高言 on 16/2/28.
-//  Copyright © 2016年 高言. All rights reserved.
+//  Created by GY on 16/2/28.
+//  Copyright © 2016年 GY. All rights reserved.
 //
 
 #import "GYCalendarView.h"

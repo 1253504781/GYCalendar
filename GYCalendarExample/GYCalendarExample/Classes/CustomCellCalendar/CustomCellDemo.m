@@ -2,8 +2,8 @@
 //  CustomCellDemo.m
 //  GYCalendarExample
 //
-//  Created by 高言 on 16/3/6.
-//  Copyright © 2016年 高言. All rights reserved.
+//  Created by GY on 16/3/6.
+//  Copyright © 2016年 GY. All rights reserved.
 //
 
 #import "CustomCellDemo.h"
@@ -35,6 +35,7 @@ static NSString * const ID = @"cell";
     // 设置起始日期
     calendarView.fireDate = [NSDate dateWithTimeIntervalSinceNow:40 * 24 * 60 * 60];
     calendarView.frame = CGRectMake(HMargin, 65, 0, 0);
+    // 称为代理
     calendarView.delegate = self;
     // 注册cell
     [calendarView registerNib:[UINib nibWithNibName:NSStringFromClass([MyDateCell class]) bundle:nil] forCellWithReuseIdentifier:ID];

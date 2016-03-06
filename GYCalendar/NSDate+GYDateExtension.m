@@ -2,8 +2,8 @@
 //  NSDate+GYDateExtension.m
 //  GYCalendar
 //
-//  Created by 高言 on 16/2/27.
-//  Copyright © 2016年 高言. All rights reserved.
+//  Created by GY on 16/2/27.
+//  Copyright © 2016年 GY. All rights reserved.
 //
 
 #import "NSDate+GYDateExtension.h"

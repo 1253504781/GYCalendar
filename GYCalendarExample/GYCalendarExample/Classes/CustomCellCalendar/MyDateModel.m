@@ -2,8 +2,8 @@
 //  MyDateModel.m
 //  GYCalendar
 //
-//  Created by 高言 on 16/3/5.
-//  Copyright © 2016年 高言. All rights reserved.
+//  Created by GY on 16/3/5.
+//  Copyright © 2016年 GY. All rights reserved.
 //
 
 #import "MyDateModel.h"

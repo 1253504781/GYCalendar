@@ -2,8 +2,8 @@
 //  CustomHeaderDemo.m
 //  GYCalendarExample
 //
-//  Created by 高言 on 16/3/6.
-//  Copyright © 2016年 高言. All rights reserved.
+//  Created by GY on 16/3/6.
+//  Copyright © 2016年 GY. All rights reserved.
 //
 
 #import "CustomHeaderDemo.h"
@@ -20,6 +20,7 @@ static CGFloat const headerTag = 100;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 初始化
     GYCalendarView *calendarView = [GYCalendarView calendarView];
     calendarView.frame = CGRectMake(HMargin, VMargin, 0, 0);
     [self.view addSubview:calendarView];
@@ -45,9 +46,11 @@ static CGFloat const headerTag = 100;
     headerView.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:headerView];
     
+    // 初始化左/右Label
     UILabel *preLabel = [self setupLabel:@"上个月" isLeft:YES];
     UILabel *nextLabel = [self setupLabel:@"下个月" isLeft:NO];
     
+    // 点击事件
     UITapGestureRecognizer *preTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(preTap:)];
     UITapGestureRecognizer *nextTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nextTap:)];
     [preLabel addGestureRecognizer:preTap];
@@ -57,6 +60,7 @@ static CGFloat const headerTag = 100;
     [headerView addSubview:nextLabel];
 }
 
+// 初始化左/右Label
 - (UILabel *)setupLabel:(NSString *)labelText isLeft:(BOOL)isLeft
 {
     UILabel *label = [[UILabel alloc] init];
@@ -71,6 +75,7 @@ static CGFloat const headerTag = 100;
     return label;
 }
 
+// 点击事件
 - (void)preTap:(UITapGestureRecognizer *)tap
 {
     UILabel *headerView = [self.view viewWithTag:headerTag];
