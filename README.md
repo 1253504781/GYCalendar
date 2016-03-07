@@ -41,8 +41,6 @@
     self.calendarView = calendarView;
     // 自定义HeaderView
     [self setupCustomHeaderView];       
-extLabel];
-}
 ```
 
 
