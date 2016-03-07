@@ -6,9 +6,12 @@
 * 1.该日历提供单月、多月两种样式可随意切换。
 * 2.自定义样式时就像给tableView自定义cell一样简单。
 * 3.日历面板的宽和高是由内部cell决定的，随着改变cell大小，日历面板的大小也会跟着改变。
+* 4.有关日历的获取方法都抽取在NSDate+GYDateExtension分类里，应用该分类还可以轻松操作日期数据。
 
 # Example
 ## 1.最简单的日历
+![最简单的日历](https://raw.githubusercontent.com/ShinyG/GYCalendar/master/gif/EazyCalendar.gif)
+
 ```objc    
     // 初始化
     GYCalendarView *calendarView = [GYCalendarView calendarView];
@@ -17,6 +20,8 @@
 ```
 
 ## 2.多月样式的日历
+![多月样式的日历](https://raw.githubusercontent.com/ShinyG/GYCalendar/master/gif/MultiCalendar.gif)
+
 ```objc
     GYCalendarView *calendarView = [GYCalendarView calendarView];
     // 设置为多月样式
@@ -26,6 +31,8 @@
 ```
 
 ## 3.自定义日历的头部样式
+![自定义日历的头部样式](https://raw.githubusercontent.com/ShinyG/GYCalendar/master/gif/CustomHeaderCalendar.gif)
+
 ```objc
     // 初始化
     GYCalendarView *calendarView = [GYCalendarView calendarView];
@@ -94,6 +101,7 @@ extLabel];
     
 
 ## 4.自定义日历Cell
+![自定义日历Cell](https://raw.githubusercontent.com/ShinyG/GYCalendar/master/gif/CustomCellCalendar.gif)
 
 	GYCalendarView *calendarView = [GYCalendarView calendarView];
     // 设置起始日期
