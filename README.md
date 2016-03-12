@@ -8,6 +8,11 @@
 * 3.日历面板的宽和高是由内部cell决定的，随着改变cell大小，日历面板的大小也会跟着改变。
 * 4.有关日历的获取方法都抽取在NSDate+GYDateExtension分类里，应用该分类还可以轻松操作日期数据。
 
+#GYCalendar的使用
+* 方法一:通过cocoapods -> pod 'GYCalendar'
+* 方法二:Download ZIP -> 把GYCalendar文件夹中的所有文件拽入项目中,主头文件为：#import "GYCalendar.h"
+
+
 # Example
 ## 1.最简单的日历
 ![最简单的日历](https://raw.githubusercontent.com/ShinyG/GYCalendar/master/gif/EazyCalendar.gif)
