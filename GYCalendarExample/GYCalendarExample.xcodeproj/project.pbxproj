@@ -17,7 +17,6 @@
 		28D6D7B81C8C62B3002ECD2F /* GYCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7A91C8C62B3002ECD2F /* GYCalendarHeaderView.m */; };
 		28D6D7B91C8C62B3002ECD2F /* GYCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7AB1C8C62B3002ECD2F /* GYCalendarView.m */; };
 		28D6D7BA1C8C62B3002ECD2F /* GYDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7AD1C8C62B3002ECD2F /* GYDateCell.m */; };
-		28D6D7BB1C8C62B3002ECD2F /* GYDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D6D7AE1C8C62B3002ECD2F /* GYDateCell.xib */; };
 		28D6D7BC1C8C62B3002ECD2F /* GYDateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7B01C8C62B3002ECD2F /* GYDateHeader.m */; };
 		28D6D7BD1C8C62B3002ECD2F /* GYDateHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D6D7B11C8C62B3002ECD2F /* GYDateHeader.xib */; };
 		28D6D7BE1C8C62B3002ECD2F /* GYDateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7B31C8C62B3002ECD2F /* GYDateModel.m */; };
@@ -71,7 +70,6 @@
 		28D6D7AB1C8C62B3002ECD2F /* GYCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYCalendarView.m; sourceTree = "<group>"; };
 		28D6D7AC1C8C62B3002ECD2F /* GYDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYDateCell.h; sourceTree = "<group>"; };
 		28D6D7AD1C8C62B3002ECD2F /* GYDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYDateCell.m; sourceTree = "<group>"; };
-		28D6D7AE1C8C62B3002ECD2F /* GYDateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GYDateCell.xib; sourceTree = "<group>"; };
 		28D6D7AF1C8C62B3002ECD2F /* GYDateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYDateHeader.h; sourceTree = "<group>"; };
 		28D6D7B01C8C62B3002ECD2F /* GYDateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYDateHeader.m; sourceTree = "<group>"; };
 		28D6D7B11C8C62B3002ECD2F /* GYDateHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GYDateHeader.xib; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 				28D6D7AB1C8C62B3002ECD2F /* GYCalendarView.m */,
 				28D6D7AC1C8C62B3002ECD2F /* GYDateCell.h */,
 				28D6D7AD1C8C62B3002ECD2F /* GYDateCell.m */,
-				28D6D7AE1C8C62B3002ECD2F /* GYDateCell.xib */,
 				28D6D7AF1C8C62B3002ECD2F /* GYDateHeader.h */,
 				28D6D7B01C8C62B3002ECD2F /* GYDateHeader.m */,
 				28D6D7B11C8C62B3002ECD2F /* GYDateHeader.xib */,
@@ -370,7 +367,6 @@
 			files = (
 				28D6D7BD1C8C62B3002ECD2F /* GYDateHeader.xib in Resources */,
 				28D6D77E1C8C5E98002ECD2F /* LaunchScreen.storyboard in Resources */,
-				28D6D7BB1C8C62B3002ECD2F /* GYDateCell.xib in Resources */,
 				28D6D77B1C8C5E98002ECD2F /* Assets.xcassets in Resources */,
 				28D6D7791C8C5E98002ECD2F /* Main.storyboard in Resources */,
 				28D6D7F81C8C8484002ECD2F /* MyDateCell.xib in Resources */,
@@ -642,6 +638,7 @@
 				28D6D79A1C8C5E98002ECD2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28D6D79B1C8C5E98002ECD2F /* Build configuration list for PBXNativeTarget "GYCalendarExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +647,7 @@
 				28D6D79D1C8C5E98002ECD2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28D6D79E1C8C5E98002ECD2F /* Build configuration list for PBXNativeTarget "GYCalendarExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +656,7 @@
 				28D6D7A01C8C5E98002ECD2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

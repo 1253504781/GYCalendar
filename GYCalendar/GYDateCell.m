@@ -10,15 +10,23 @@
 
 @interface GYDateCell()
 
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) UILabel *dateLabel;
 
 @end
 
 @implementation GYDateCell
 
-- (void)awakeFromNib
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self.dateLabel.font = [UIFont boldSystemFontOfSize:14];
+    if (self = [super initWithFrame:frame]) {
+        UILabel *dateLable = [[UILabel alloc] init];
+        [self.contentView addSubview:dateLable];
+        self.dateLabel = dateLable;
+        self.dateLabel.textAlignment = NSTextAlignmentCenter;
+        self.dateLabel.font = [UIFont boldSystemFontOfSize:14];
+    }
+    
+    return self;
 }
 
 - (void)setDateModel:(GYDateModel *)dateModel
@@ -40,6 +48,13 @@
 {
     _textColor = textColor;
     self.dateLabel.textColor = textColor;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.dateLabel.frame = self.bounds;
 }
 
 @end

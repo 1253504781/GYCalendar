@@ -26,6 +26,7 @@
     self.backgroundColor = [UIColor whiteColor];
     self.titleLabel.text = @"";
     self.dateLabel.text = [NSString stringWithFormat:@"%ld",dateModel.date.gy_day];
+    self.dateLabel.font = [UIFont boldSystemFontOfSize:14];
     
     if (dateModel.cellDay == GYDateCellDayWorkDay) {
         self.dateLabel.textColor = [UIColor blackColor];

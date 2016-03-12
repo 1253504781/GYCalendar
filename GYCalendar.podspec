@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'GYCalendar'
-  s.version      = '1.2.2'
+  s.version      = '1.2.3'
   s.summary  = 'A little kit of calendar which you can custom-made'
   s.homepage     = 'https://github.com/ShinyG'
   s.license      = 'MIT'

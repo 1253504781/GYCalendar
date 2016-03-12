@@ -128,7 +128,8 @@ static NSString * const headerID = @"DateHeader";
     collectionView.delegate = self;
     
     // 注册基础展示日期cell
-    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([GYDateCell class]) bundle:[NSBundle bundleForClass:[GYDateCell class]]] forCellWithReuseIdentifier:ID];
+    [collectionView registerClass:[GYDateCell class] forCellWithReuseIdentifier:ID];
+//    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([GYDateCell class]) bundle:[NSBundle bundleForClass:[GYDateCell class]]] forCellWithReuseIdentifier:ID];
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([GYDateHeader class]) bundle:[NSBundle bundleForClass:[GYDateHeader class]]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerID];
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.pagingEnabled = pageEnable;
