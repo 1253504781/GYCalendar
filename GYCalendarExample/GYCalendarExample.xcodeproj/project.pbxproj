@@ -18,7 +18,6 @@
 		28D6D7B91C8C62B3002ECD2F /* GYCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7AB1C8C62B3002ECD2F /* GYCalendarView.m */; };
 		28D6D7BA1C8C62B3002ECD2F /* GYDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7AD1C8C62B3002ECD2F /* GYDateCell.m */; };
 		28D6D7BC1C8C62B3002ECD2F /* GYDateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7B01C8C62B3002ECD2F /* GYDateHeader.m */; };
-		28D6D7BD1C8C62B3002ECD2F /* GYDateHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D6D7B11C8C62B3002ECD2F /* GYDateHeader.xib */; };
 		28D6D7BE1C8C62B3002ECD2F /* GYDateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7B31C8C62B3002ECD2F /* GYDateModel.m */; };
 		28D6D7BF1C8C62B3002ECD2F /* GYWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7B51C8C62B3002ECD2F /* GYWeekView.m */; };
 		28D6D7C01C8C62B3002ECD2F /* NSDate+GYDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D7B71C8C62B3002ECD2F /* NSDate+GYDateExtension.m */; };
@@ -72,7 +71,6 @@
 		28D6D7AD1C8C62B3002ECD2F /* GYDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYDateCell.m; sourceTree = "<group>"; };
 		28D6D7AF1C8C62B3002ECD2F /* GYDateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYDateHeader.h; sourceTree = "<group>"; };
 		28D6D7B01C8C62B3002ECD2F /* GYDateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYDateHeader.m; sourceTree = "<group>"; };
-		28D6D7B11C8C62B3002ECD2F /* GYDateHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GYDateHeader.xib; sourceTree = "<group>"; };
 		28D6D7B21C8C62B3002ECD2F /* GYDateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYDateModel.h; sourceTree = "<group>"; };
 		28D6D7B31C8C62B3002ECD2F /* GYDateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYDateModel.m; sourceTree = "<group>"; };
 		28D6D7B41C8C62B3002ECD2F /* GYWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYWeekView.h; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 				28D6D7AD1C8C62B3002ECD2F /* GYDateCell.m */,
 				28D6D7AF1C8C62B3002ECD2F /* GYDateHeader.h */,
 				28D6D7B01C8C62B3002ECD2F /* GYDateHeader.m */,
-				28D6D7B11C8C62B3002ECD2F /* GYDateHeader.xib */,
 				28D6D7B21C8C62B3002ECD2F /* GYDateModel.h */,
 				28D6D7B31C8C62B3002ECD2F /* GYDateModel.m */,
 				28D6D7B41C8C62B3002ECD2F /* GYWeekView.h */,
@@ -365,7 +362,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D6D7BD1C8C62B3002ECD2F /* GYDateHeader.xib in Resources */,
 				28D6D77E1C8C5E98002ECD2F /* LaunchScreen.storyboard in Resources */,
 				28D6D77B1C8C5E98002ECD2F /* Assets.xcassets in Resources */,
 				28D6D7791C8C5E98002ECD2F /* Main.storyboard in Resources */,

@@ -130,7 +130,8 @@ static NSString * const headerID = @"DateHeader";
     // 注册基础展示日期cell
     [collectionView registerClass:[GYDateCell class] forCellWithReuseIdentifier:ID];
 //    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([GYDateCell class]) bundle:[NSBundle bundleForClass:[GYDateCell class]]] forCellWithReuseIdentifier:ID];
-    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([GYDateHeader class]) bundle:[NSBundle bundleForClass:[GYDateHeader class]]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerID];
+    [collectionView registerClass:[GYDateHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerID];
+//    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([GYDateHeader class]) bundle:[NSBundle bundleForClass:[GYDateHeader class]]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerID];
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.pagingEnabled = pageEnable;
     collectionView.showsVerticalScrollIndicator = NO;
