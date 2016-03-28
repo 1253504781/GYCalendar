@@ -23,6 +23,7 @@ static CGFloat const headerTag = 100;
     // 初始化
     GYCalendarView *calendarView = [GYCalendarView calendarView];
     calendarView.frame = CGRectMake(HMargin, VMargin, 0, 0);
+    [calendarView hideHeaderView];
     [self.view addSubview:calendarView];
     self.calendarView = calendarView;
     

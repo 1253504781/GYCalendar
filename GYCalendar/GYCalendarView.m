@@ -168,6 +168,7 @@ static NSString * const headerID = @"DateHeader";
 // 隐藏头部视图
 - (void)hideHeaderView
 {
+    self.headerView.hidden = YES;
     self.headerView = nil;
 }
 

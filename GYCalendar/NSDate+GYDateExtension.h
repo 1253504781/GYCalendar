@@ -51,4 +51,8 @@
 /** 判断两个日期是否是同一天 */
 - (BOOL)gy_isEqualDay:(NSDate *)date;
 
+
+@property (nonatomic , strong) NSDateFormatter *format;
+@property (nonatomic , strong) NSCalendar *calendar;
+
 @end

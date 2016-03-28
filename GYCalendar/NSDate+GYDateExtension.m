@@ -7,13 +7,45 @@
 //
 
 #import "NSDate+GYDateExtension.h"
+#import <objc/runtime.h>
 
 @implementation NSDate (GYDateExtension)
+
+static const void *gy_formatKey = &gy_formatKey;
+static const void *gy_calendar = &gy_calendar;
+
+- (NSDateFormatter *)format
+{
+    NSDateFormatter *formatter = objc_getAssociatedObject(self, &gy_formatKey);
+    if (!formatter) {
+        [self setFormat:[[NSDateFormatter alloc] init]];
+    }
+    return objc_getAssociatedObject(self, &gy_formatKey);
+}
+
+- (void)setFormat:(NSDateFormatter *)format
+{
+    objc_setAssociatedObject(self, &gy_formatKey, format, OBJC_ASSOCIATION_COPY);
+}
+
+- (NSCalendar *)calendar
+{
+    NSCalendar *currentCalendar = objc_getAssociatedObject(self, &gy_calendar);
+    if (!currentCalendar) {
+        [self setCalendar:[NSCalendar currentCalendar]];
+    }
+    return objc_getAssociatedObject(self, &gy_calendar);
+}
+
+- (void)setCalendar:(NSCalendar *)calendar
+{
+    objc_setAssociatedObject(self, &gy_calendar, calendar, OBJC_ASSOCIATION_COPY);
+}
 
 /** 将date转为"format"格式的字符串 */
 - (NSString *)gy_dateByFormat:(NSString *)formator
 {
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    NSDateFormatter *format = [self format];
     format.dateFormat = formator;
     //避免时区误差
     NSTimeZone *zone = [NSTimeZone systemTimeZone];
@@ -40,7 +72,7 @@
 /** 获取给定日期的当月有多少天 */
 - (NSInteger)gy_dayLength
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [self calendar];
     NSRange days = [calendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self];
     
     return days.length;
@@ -49,7 +81,7 @@
 /** 获取给定日期是周几 (周日＝0) */
 - (NSInteger)gy_weekday
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [self calendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitWeekday fromDate:self];
     return components.weekday - 1;
 }
@@ -57,7 +89,7 @@
 /** 获取给定日期的当月第一天的日期 */
 - (instancetype)gy_firstDate
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [self calendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
     components.day = 1;
     NSDate *firstDate = [calendar dateFromComponents:components];
@@ -71,7 +103,7 @@
 - (NSArray *)gy_datesOfMonth
 {
     NSMutableArray *datesOfMonth = @[].mutableCopy;
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [self calendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
     for (int i = 1; i <= self.gy_dayLength; i++) {
         components.day = i;
@@ -93,7 +125,7 @@
  */
 - (instancetype)gy_nextDateForchangeY:(NSInteger)year changeM:(NSInteger)month changeD:(NSInteger)day
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [self calendar];
     NSDateComponents *newComponents = [[NSDateComponents alloc] init];
     [newComponents setYear:year];
     [newComponents setMonth:month];
@@ -123,7 +155,7 @@
 /** 获取指定日期的是几号 */
 - (NSInteger)gy_day
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [self calendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitDay fromDate:self];
     return [components day];
 }
@@ -131,7 +163,7 @@
 /** 获取指定日期的是几月 */
 - (NSString *)gy_month
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [self calendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitMonth fromDate:self];
     NSString *month;
     switch ([components month]) {
@@ -193,7 +225,7 @@
 /** 获取指定日期的是几年 */
 - (NSString *)gy_year
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [self calendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:self];
     return [NSString stringWithFormat:@"%ld年",[components year]];
 }
@@ -201,7 +233,7 @@
 /** 判断两个日期是否是同一天 */
 - (BOOL)gy_isEqualDay:(NSDate *)date
 {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter *formatter = [self format];
     formatter.dateFormat = @"yyyy-MM-dd";
     return [[formatter stringFromDate:self] isEqualToString:[formatter stringFromDate:date]];
 }
